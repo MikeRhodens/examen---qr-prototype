@@ -4,22 +4,31 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://rawgit.com/sitepoint-editors/jsqrcode/master/src/qr_packed.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="bower_components/qcode-decoder/build/qcode-decoder.min.js"></script>
     <script src="script.js"></script>
 </head>
 <body>
 <div class="scan-containter">
-    <label class=qrcode-text-btn>
-        <input type=file
-               accept="image/*"
-               capture=environment
-               onclick="return showQRIntro();"
-               onchange="openQRCamera(this);"
-               tabindex=-1>
-    </label>
+    <div class="video-container">
+        <video autoplay="" id="camera"></video>
+    </div>
 </div>
+<hr>
 <div class="info-container">
-        
+    <div class="name">
+        naam :
+    </div>
+    <div class="age">
+        leeftijd :
+    </div>
+    <div class="talents">
+        <ul class="talent-list">
+            <li class="talent">talent 1</li>
+            <li class="talent">talent 2</li>
+            <li class="talent">talent 3</li>
+        </ul>
+    </div>
 </div>
 </body>
 </html>
